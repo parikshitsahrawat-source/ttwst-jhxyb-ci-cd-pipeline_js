@@ -1,11 +1,11 @@
-name: CI workflow
+name: CI Workflow
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-jobs:
-    build:
+on: [push]
+
+# FIX: Change 'job:' to 'jobs:' at the top level
+jobs:  
+  my_build_job: # You need an identifier for your job here
     runs-on: ubuntu-latest
-    containers: node:20-alpine
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
