@@ -9,5 +9,3 @@ on:
 job:
     runs-on: ubuntu-latest
     containers: node:20-alpine
-      python:
-        image: python:3.11
